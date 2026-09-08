@@ -1,0 +1,12 @@
+{
+  "prog": "atomic_demo",
+  "n_insns": 37,
+  "n_mem_insns": 10,
+  "elided_tx_pct": 100.0,
+  "elided_direct_pct": 100.0,
+  "fuel_elided": true,
+  "ro_maps": [],
+  "analysis_ms": 0.298,
+  "fuel_bound": 37,
+  "analysis_complete": true
+}

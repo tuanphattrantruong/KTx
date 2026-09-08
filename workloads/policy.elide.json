@@ -1,0 +1,14 @@
+{
+  "prog": "policy",
+  "n_insns": 65,
+  "n_mem_insns": 22,
+  "elided_tx_pct": 100.0,
+  "elided_direct_pct": 100.0,
+  "fuel_elided": true,
+  "ro_maps": [
+    "pol_rules"
+  ],
+  "analysis_ms": 0.555,
+  "fuel_bound": 65,
+  "analysis_complete": true
+}

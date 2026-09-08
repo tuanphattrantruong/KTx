@@ -1,0 +1,29 @@
+{
+  "experiment": "e1_throughput",
+  "meta": {
+    "date_iso": "2026-08-29T07:06:20+0700",
+    "host": "Apple M1",
+    "ncpu": 8,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "12.0.5 (clang-1205.0.22.9)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "seed": 42,
+    "cmdline": "bin/ktxbench --prog workloads/atomic_demo.kbin --mode sfi --measure throughput --threads 8 --iters 2000000 --warmup 10000 --seed 42 --nkeys 1024 --zipf 0.0 --pktlen-min 64 --pktlen-max 256 --fuel 65536 --exp e1_throughput --out experiments/results/e1_thr_atomic_demo_sfi.json"
+  },
+  "runs": [
+    {
+      "prog": "atomic_demo.kbin", "mode": "sfi", "measure": "throughput",
+      "threads": 8, "iters": 2000000, "warmup": 10000, "fuel": 65536,
+      "nkeys": 1024, "zipf_theta": 0.000, "pktlen_min": 64, "pktlen_max": 256,
+      "elide": null,
+      "metrics": {
+        "ops_total": 16000000, "wall_s": 1.090971, "mops_per_s": 14.6658,
+        "goodput_commits_per_s": 14665831.0,
+        "per_thread_ops": [2000000, 2000000, 2000000, 2000000, 2000000, 2000000, 2000000, 2000000],
+        "commits": 16000000, "aborts_guard": 0, "aborts_fuel": 0, "aborts_helper": 0, "aborts_conflict": 0, "aborts_capacity": 0
+      }
+    }
+  ]
+}

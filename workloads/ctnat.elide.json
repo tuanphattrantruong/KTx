@@ -1,0 +1,12 @@
+{
+  "prog": "ctnat",
+  "n_insns": 40,
+  "n_mem_insns": 12,
+  "elided_tx_pct": 100.0,
+  "elided_direct_pct": 100.0,
+  "fuel_elided": true,
+  "ro_maps": [],
+  "analysis_ms": 0.278,
+  "fuel_bound": 40,
+  "analysis_complete": true
+}

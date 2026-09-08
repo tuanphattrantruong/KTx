@@ -1,0 +1,11 @@
+{
+  "prog": "loopy",
+  "n_insns": 67,
+  "n_mem_insns": 20,
+  "elided_tx_pct": 85.0,
+  "elided_direct_pct": 85.0,
+  "fuel_elided": false,
+  "ro_maps": [],
+  "analysis_ms": 1.114,
+  "analysis_complete": true
+}

@@ -1,0 +1,352 @@
+{
+  "experiment": "E18_deadlock_free_predeclared_2pl",
+  "design": "all declared shared program maps acquired in ascending environment-map-id order; direct effects; guards and fuel retained",
+  "scope": "single Apple M3 Ultra host; no Linux/x86 transfer claim",
+  "meta": {
+    "date_iso": "2026-09-01T12:15:40+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125,
+    "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "seed": 203,
+    "cmdline": "<artifact-root>/bin/ktxbench --prog <artifact-root>/workloads/l4lb.kbin --mode coarse --jit --measure throughput --threads 16 --iters 100000 --warmup 10000 --seed 203 --nkeys 1024 --zipf 0.0 --pktlen-min 64 --pktlen-max 256 --fuel 65536 --exp e18_p2pl --out /var/folders/v_/c9g5kc1x2871y85d97x_zj9r0000gv/T/ktx-e18-e8w_rsr7/l4lb-coarse-16-2.json"
+  },
+  "cells": [
+    {
+      "program": "ctnat",
+      "mode": "coarse",
+      "threads": 1,
+      "repeats": 3,
+      "mops_per_s_median": 2.5094,
+      "mops_per_s_min": 2.4788,
+      "mops_per_s_max": 2.5211
+    },
+    {
+      "program": "ctnat",
+      "mode": "coarse",
+      "threads": 2,
+      "repeats": 3,
+      "mops_per_s_median": 3.3994,
+      "mops_per_s_min": 3.0194,
+      "mops_per_s_max": 3.6405
+    },
+    {
+      "program": "ctnat",
+      "mode": "coarse",
+      "threads": 4,
+      "repeats": 3,
+      "mops_per_s_median": 3.2081,
+      "mops_per_s_min": 3.0992,
+      "mops_per_s_max": 3.3357
+    },
+    {
+      "program": "ctnat",
+      "mode": "coarse",
+      "threads": 8,
+      "repeats": 3,
+      "mops_per_s_median": 1.5238,
+      "mops_per_s_min": 1.4748,
+      "mops_per_s_max": 1.5426
+    },
+    {
+      "program": "ctnat",
+      "mode": "coarse",
+      "threads": 16,
+      "repeats": 3,
+      "mops_per_s_median": 0.7639,
+      "mops_per_s_min": 0.7624,
+      "mops_per_s_max": 0.8104
+    },
+    {
+      "program": "ctnat",
+      "mode": "p2pl",
+      "threads": 1,
+      "repeats": 3,
+      "mops_per_s_median": 3.1597,
+      "mops_per_s_min": 3.1454,
+      "mops_per_s_max": 3.1731
+    },
+    {
+      "program": "ctnat",
+      "mode": "p2pl",
+      "threads": 2,
+      "repeats": 3,
+      "mops_per_s_median": 3.5524,
+      "mops_per_s_min": 3.3887,
+      "mops_per_s_max": 4.6613
+    },
+    {
+      "program": "ctnat",
+      "mode": "p2pl",
+      "threads": 4,
+      "repeats": 3,
+      "mops_per_s_median": 2.1502,
+      "mops_per_s_min": 1.9591,
+      "mops_per_s_max": 2.3004
+    },
+    {
+      "program": "ctnat",
+      "mode": "p2pl",
+      "threads": 8,
+      "repeats": 3,
+      "mops_per_s_median": 1.0096,
+      "mops_per_s_min": 0.9873,
+      "mops_per_s_max": 1.0474
+    },
+    {
+      "program": "ctnat",
+      "mode": "p2pl",
+      "threads": 16,
+      "repeats": 3,
+      "mops_per_s_median": 0.626,
+      "mops_per_s_min": 0.6157,
+      "mops_per_s_max": 0.6339
+    },
+    {
+      "program": "ctnat",
+      "mode": "tx",
+      "threads": 1,
+      "repeats": 3,
+      "mops_per_s_median": 2.4705,
+      "mops_per_s_min": 2.4474,
+      "mops_per_s_max": 2.4946
+    },
+    {
+      "program": "ctnat",
+      "mode": "tx",
+      "threads": 2,
+      "repeats": 3,
+      "mops_per_s_median": 3.6832,
+      "mops_per_s_min": 3.5988,
+      "mops_per_s_max": 4.0206
+    },
+    {
+      "program": "ctnat",
+      "mode": "tx",
+      "threads": 4,
+      "repeats": 3,
+      "mops_per_s_median": 6.3661,
+      "mops_per_s_min": 5.9263,
+      "mops_per_s_max": 6.5647
+    },
+    {
+      "program": "ctnat",
+      "mode": "tx",
+      "threads": 8,
+      "repeats": 3,
+      "mops_per_s_median": 8.9373,
+      "mops_per_s_min": 8.5953,
+      "mops_per_s_max": 9.1429
+    },
+    {
+      "program": "ctnat",
+      "mode": "tx",
+      "threads": 16,
+      "repeats": 3,
+      "mops_per_s_median": 11.1188,
+      "mops_per_s_min": 11.0796,
+      "mops_per_s_max": 11.9044
+    },
+    {
+      "program": "l4lb",
+      "mode": "coarse",
+      "threads": 1,
+      "repeats": 3,
+      "mops_per_s_median": 1.9157,
+      "mops_per_s_min": 1.9017,
+      "mops_per_s_max": 1.9227
+    },
+    {
+      "program": "l4lb",
+      "mode": "coarse",
+      "threads": 2,
+      "repeats": 3,
+      "mops_per_s_median": 2.7949,
+      "mops_per_s_min": 2.3298,
+      "mops_per_s_max": 2.9317
+    },
+    {
+      "program": "l4lb",
+      "mode": "coarse",
+      "threads": 4,
+      "repeats": 3,
+      "mops_per_s_median": 2.1916,
+      "mops_per_s_min": 2.0646,
+      "mops_per_s_max": 2.2003
+    },
+    {
+      "program": "l4lb",
+      "mode": "coarse",
+      "threads": 8,
+      "repeats": 3,
+      "mops_per_s_median": 1.1652,
+      "mops_per_s_min": 0.8944,
+      "mops_per_s_max": 1.1967
+    },
+    {
+      "program": "l4lb",
+      "mode": "coarse",
+      "threads": 16,
+      "repeats": 3,
+      "mops_per_s_median": 0.687,
+      "mops_per_s_min": 0.5186,
+      "mops_per_s_max": 0.7205
+    },
+    {
+      "program": "l4lb",
+      "mode": "p2pl",
+      "threads": 1,
+      "repeats": 3,
+      "mops_per_s_median": 2.6262,
+      "mops_per_s_min": 2.6054,
+      "mops_per_s_max": 2.6321
+    },
+    {
+      "program": "l4lb",
+      "mode": "p2pl",
+      "threads": 2,
+      "repeats": 3,
+      "mops_per_s_median": 2.9516,
+      "mops_per_s_min": 2.8232,
+      "mops_per_s_max": 3.1967
+    },
+    {
+      "program": "l4lb",
+      "mode": "p2pl",
+      "threads": 4,
+      "repeats": 3,
+      "mops_per_s_median": 2.3327,
+      "mops_per_s_min": 2.2038,
+      "mops_per_s_max": 2.3813
+    },
+    {
+      "program": "l4lb",
+      "mode": "p2pl",
+      "threads": 8,
+      "repeats": 3,
+      "mops_per_s_median": 1.2145,
+      "mops_per_s_min": 1.1428,
+      "mops_per_s_max": 1.2564
+    },
+    {
+      "program": "l4lb",
+      "mode": "p2pl",
+      "threads": 16,
+      "repeats": 3,
+      "mops_per_s_median": 0.7255,
+      "mops_per_s_min": 0.7132,
+      "mops_per_s_max": 0.7284
+    },
+    {
+      "program": "l4lb",
+      "mode": "tx",
+      "threads": 1,
+      "repeats": 3,
+      "mops_per_s_median": 1.933,
+      "mops_per_s_min": 1.9313,
+      "mops_per_s_max": 1.9583
+    },
+    {
+      "program": "l4lb",
+      "mode": "tx",
+      "threads": 2,
+      "repeats": 3,
+      "mops_per_s_median": 3.1633,
+      "mops_per_s_min": 3.1288,
+      "mops_per_s_max": 3.3503
+    },
+    {
+      "program": "l4lb",
+      "mode": "tx",
+      "threads": 4,
+      "repeats": 3,
+      "mops_per_s_median": 5.5887,
+      "mops_per_s_min": 5.5524,
+      "mops_per_s_max": 6.1074
+    },
+    {
+      "program": "l4lb",
+      "mode": "tx",
+      "threads": 8,
+      "repeats": 3,
+      "mops_per_s_median": 8.0276,
+      "mops_per_s_min": 7.8256,
+      "mops_per_s_max": 8.0884
+    },
+    {
+      "program": "l4lb",
+      "mode": "tx",
+      "threads": 16,
+      "repeats": 3,
+      "mops_per_s_median": 10.5577,
+      "mops_per_s_min": 10.078,
+      "mops_per_s_max": 10.5807
+    }
+  ],
+  "ratios": [
+    {
+      "program": "ctnat",
+      "threads": 1,
+      "tx_over_p2pl": 0.7818780263949109,
+      "tx_over_coarse": 0.9844982864429744
+    },
+    {
+      "program": "ctnat",
+      "threads": 2,
+      "tx_over_p2pl": 1.0368201779078932,
+      "tx_over_coarse": 1.0834853209389892
+    },
+    {
+      "program": "ctnat",
+      "threads": 4,
+      "tx_over_p2pl": 2.960701330108827,
+      "tx_over_coarse": 1.9843832798229484
+    },
+    {
+      "program": "ctnat",
+      "threads": 8,
+      "tx_over_p2pl": 8.852317749603804,
+      "tx_over_coarse": 5.865139782123639
+    },
+    {
+      "program": "ctnat",
+      "threads": 16,
+      "tx_over_p2pl": 17.761661341853035,
+      "tx_over_coarse": 14.555308286424925
+    },
+    {
+      "program": "l4lb",
+      "threads": 1,
+      "tx_over_p2pl": 0.7360444749067093,
+      "tx_over_coarse": 1.0090306415409511
+    },
+    {
+      "program": "l4lb",
+      "threads": 2,
+      "tx_over_p2pl": 1.0717238108144735,
+      "tx_over_coarse": 1.1318115138287594
+    },
+    {
+      "program": "l4lb",
+      "threads": 4,
+      "tx_over_p2pl": 2.395807433446221,
+      "tx_over_coarse": 2.5500547545172476
+    },
+    {
+      "program": "l4lb",
+      "threads": 8,
+      "tx_over_p2pl": 6.609798270893372,
+      "tx_over_coarse": 6.889461036731891
+    },
+    {
+      "program": "l4lb",
+      "threads": 16,
+      "tx_over_p2pl": 14.552308752584425,
+      "tx_over_coarse": 15.36783114992722
+    }
+  ]
+}

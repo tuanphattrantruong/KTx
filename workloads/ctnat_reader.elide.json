@@ -1,0 +1,15 @@
+{
+  "prog": "ctnat_reader",
+  "n_insns": 24,
+  "n_mem_insns": 5,
+  "elided_tx_pct": 100.0,
+  "elided_direct_pct": 100.0,
+  "fuel_elided": true,
+  "ro_maps": [
+    "conntrack",
+    "nat"
+  ],
+  "analysis_ms": 0.391,
+  "fuel_bound": 24,
+  "analysis_complete": true
+}

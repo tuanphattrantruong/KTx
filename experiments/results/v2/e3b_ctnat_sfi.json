@@ -1,0 +1,28 @@
+{
+  "experiment": "e3_torn",
+  "meta": {
+    "date_iso": "2026-08-29T14:19:55+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "seed": 42,
+    "cmdline": "bin/ktxtorn --pair ctnat --mode sfi --writers 4 --readers 0 --ops-per-writer 500000 --seed 42 --nkeys 512 --fuel-lo 16 --fuel-hi 96 --workloads-dir workloads --out experiments/results/v2/e3b_ctnat_sfi.json"
+  },
+  "runs": [
+    {
+      "sub_experiment": "e3b", "pair": "ctnat", "mode": "sfi",
+      "writers": 4, "readers": 0, "ops_per_writer": 500000, "nkeys": 512, "seed": 42,
+      "fuel_lo": 16, "fuel_hi": 96,
+      "metrics": {
+        "wall_s": 0.329116,
+        "attempts": 2000000, "commits": 1481124, "aborts_fuel": 518876, "aborts_other": 0,
+        "abort_fraction": 0.259438,
+        "torn_keys": 48, "scanned_keys": 512
+      }
+    }
+  ]
+}

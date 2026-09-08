@@ -1,0 +1,31 @@
+{
+  "experiment": "e1_throughput",
+  "meta": {
+    "date_iso": "2026-08-29T14:32:38+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "seed": 45,
+    "cmdline": "bin/ktxbench --prog workloads/flowstats_c.kbin --no-shadow-diff --mode tx --measure throughput --threads 8 --iters 400000 --warmup 40000 --seed 45 --nkeys 1024 --zipf 0.0 --pktlen-min 64 --pktlen-max 256 --fuel 65536 --exp e1_throughput --out experiments/results/v2/e1_thr_flowstats_c_txnd_r3.json"
+  },
+  "runs": [
+    {
+      "prog": "flowstats_c.kbin", "mode": "tx", "measure": "throughput",
+      "threads": 8, "iters": 400000, "warmup": 40000, "fuel": 65536,
+      "nkeys": 1024, "zipf_theta": 0.000, "pktlen_min": 64, "pktlen_max": 256,
+      "shadow_diff": 0, "jit": 0, "jit_active": 0, "jit_code_bytes": 0,
+      "memory": { "thread_bytes": 86688, "prog_bytes": 3200, "map_data_bytes": 163840, "map_meta_bytes": 17008, "ring_bytes": 1048576, "threads": 8, "rss_bytes": 2572288, "hwm_arena_bytes": 40, "hwm_records": 1, "hwm_readset": 1 },
+      "elide": null,
+      "metrics": {
+        "ops_total": 3200000, "wall_s": 0.278101, "mops_per_s": 11.5066,
+        "goodput_commits_per_s": 11240605.7,
+        "per_thread_ops": [400000, 400000, 400000, 400000, 400000, 400000, 400000, 400000],
+        "commits": 3126019, "aborts_guard": 0, "aborts_fuel": 0, "aborts_helper": 0, "aborts_conflict": 73981, "aborts_capacity": 0, "aborts_deadlock": 0, "retries": 0, "elide_faults": 0, "elide_audited": 0
+      }
+    }
+  ]
+}

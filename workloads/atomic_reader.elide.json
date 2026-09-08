@@ -1,0 +1,15 @@
+{
+  "prog": "atomic_reader",
+  "n_insns": 24,
+  "n_mem_insns": 5,
+  "elided_tx_pct": 100.0,
+  "elided_direct_pct": 100.0,
+  "fuel_elided": true,
+  "ro_maps": [
+    "acct_a",
+    "acct_b"
+  ],
+  "analysis_ms": 0.235,
+  "fuel_bound": 24,
+  "analysis_complete": true
+}

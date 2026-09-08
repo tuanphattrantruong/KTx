@@ -1,0 +1,12 @@
+{
+  "prog": "pktrewrite",
+  "n_insns": 22,
+  "n_mem_insns": 4,
+  "elided_tx_pct": 100.0,
+  "elided_direct_pct": 100.0,
+  "fuel_elided": true,
+  "ro_maps": [],
+  "analysis_ms": 0.294,
+  "fuel_bound": 162,
+  "analysis_complete": true
+}

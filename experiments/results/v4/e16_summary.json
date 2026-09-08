@@ -1,0 +1,24 @@
+{
+  "experiment": "E16_mixed_observer",
+  "repetitions": {
+    "ordinary": {
+      "runs": 3,
+      "reader_samples": 178551,
+      "torn_observations": 177477,
+      "commits_per_s_median": 7998720.205,
+      "commits_per_s_min": 4217772.004,
+      "commits_per_s_max": 13544262.65
+    },
+    "published": {
+      "runs": 3,
+      "reader_samples": 640118,
+      "torn_observations": 0,
+      "commits_per_s_median": 5796295.008,
+      "commits_per_s_min": 4701457.452,
+      "commits_per_s_max": 6623393.827
+    }
+  },
+  "published_throughput_fraction": 0.7246528018790727,
+  "published_overhead_fraction": 0.27534719812092734,
+  "pass": true
+}

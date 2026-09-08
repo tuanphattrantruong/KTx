@@ -1,0 +1,22 @@
+DataDog_datadog-agent        programs=  349  maps=  27  write>=2 maps=   1 (0.3%)
+aquasecurity_tracee          programs=  148  maps=  87  write>=2 maps= 126 (85.1%)
+cilium_cilium                programs=   52  maps=  90  write>=2 maps=  12 (23.1%)
+cilium_tetragon              programs=    3  maps=  74  write>=2 maps=   1 (33.3%)
+cloudflare_ebpf_exporter     programs=  114  maps=  77  write>=2 maps=   0 (0.0%)
+facebookincubator_katran     programs=    8  maps=  51  write>=2 maps=   3 (37.5%)
+iovisor_bcc                  programs=  375  maps=  54  write>=2 maps=  83 (22.1%)
+libbpf_libbpf-bootstrap      programs=   27  maps=   9  write>=2 maps=   2 (7.4%)
+linux                        programs= 4475  maps= 382  write>=2 maps=  53 (1.2%)
+
+== corpus totals ==
+  programs: 5551
+  programs_with_any_write: 823
+  programs_writing_2plus_maps: 281
+  programs_writing_3plus_maps: 149
+  programs_read_one_write_another: 66
+  pct_writing_2plus: 5.06
+  pct_of_effectful_writing_2plus: 34.14
+  ambiguous_name_programs: 32
+  write_multiplicity_histogram: {'0': 4728, '1': 542, '2': 132, '3': 22, '4': 14, '5': 4, '6': 3, '7': 8, '8': 58, '9': 19, '10': 15, '11': 6}
+
+wrote experiments/results/v2/e10_corpus.json

@@ -1,0 +1,30 @@
+{
+  "experiment": "e9_policy_bypass",
+  "meta": {
+    "date_iso": "2026-08-29T14:22:06+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "seed": 42,
+    "cmdline": "bin/ktxpolicy --prog workloads/firewall.kbin --elide workloads/firewall.elide --mode 2pl --vector conflict --attackers 4 --legit 4 --ops 200000 --default pass --retries 0 --seed 42 --out experiments/results/v2/e9_conflict_2pl_pass_r0.json"
+  },
+  "runs": [
+    {
+      "prog": "workloads/firewall.kbin", "mode": "2pl", "vector": "conflict",
+      "default_verdict": "pass", "retries": 0,
+      "attackers": 4, "legit": 4, "ops_per_thread": 200000, "attack_keys": 1, "legit_keys": 1024, "fuel": 65536,
+      "jit": 0, "jit_active": 0,
+      "metrics": {
+        "attacker_ops": 800000, "attacker_pass": 130240, "attacker_drop": 669760,
+        "legit_ops": 800000, "legit_pass": 800000, "legit_drop": 0,
+        "bypass_rate": 0.162800, "false_drop_rate": 0.000000,
+        "commits": 1465104, "aborts_guard": 0, "aborts_fuel": 0, "aborts_helper": 0,
+        "aborts_conflict": 0, "aborts_capacity": 0, "aborts_deadlock": 134896, "retries": 0
+      }
+    }
+  ]
+}

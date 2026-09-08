@@ -1,0 +1,32 @@
+{
+  "experiment": "e14_elision_audit",
+  "meta": {
+    "date_iso": "2026-08-29T14:32:59+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "latency_batch": 32,
+    "seed": 42,
+    "cmdline": "bin/ktxbench --prog workloads/atomic_demo.kbin --elide workloads/atomic_demo.elide --mode tx-audit --measure latency --threads 1 --iters 1000000 --warmup 100000 --seed 42 --nkeys 1024 --zipf 0.0 --pktlen-min 64 --pktlen-max 256 --fuel 65536 --batch 32 --exp e14_elision_audit --out experiments/results/v2/e14_audit_atomic_demo.json"
+  },
+  "runs": [
+    {
+      "prog": "atomic_demo.kbin", "mode": "tx-audit", "measure": "latency",
+      "threads": 1, "iters": 1000000, "warmup": 100000, "fuel": 65536,
+      "nkeys": 1024, "zipf_theta": 0.000, "pktlen_min": 64, "pktlen_max": 256,
+      "shadow_diff": 1, "jit": 0, "jit_active": 0, "jit_code_bytes": 0,
+      "memory": { "thread_bytes": 86688, "prog_bytes": 3776, "map_data_bytes": 4096, "map_meta_bytes": 1248, "ring_bytes": 1048576, "threads": 1, "rss_bytes": 2342912, "hwm_arena_bytes": 48, "hwm_records": 2, "hwm_readset": 2 },
+      "elide": "workloads/atomic_demo.elide",
+      "timed_region": "ktx_run_only", "batch": 32,
+      "metrics": {
+        "iters_timed": 1000000, "batches": 31250,
+        "ns_min": 141.927, "ns_p50": 161.458, "ns_p90": 170.573, "ns_p99": 208.333, "ns_p999": 424.479, "ns_mean": 163.468,
+        "commits": 1000000, "aborts_guard": 0, "aborts_fuel": 0, "aborts_helper": 0, "aborts_conflict": 0, "aborts_capacity": 0, "aborts_deadlock": 0, "retries": 0, "elide_faults": 0, "elide_audited": 7000000
+      }
+    }
+  ]
+}

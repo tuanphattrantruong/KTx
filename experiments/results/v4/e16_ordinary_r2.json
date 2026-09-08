@@ -1,0 +1,6 @@
+{
+  "experiment": "E16_mixed_observer",
+  "mode": "ordinary", "writes": 250000, "reader_samples": 75786,
+  "torn_observations": 75342, "writer_retries": 0,
+  "seconds": 0.031255000, "commits_per_s": 7998720.205
+}

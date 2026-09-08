@@ -1,0 +1,25 @@
+{
+  "experiment": "e13_engine",
+  "meta": {
+    "date_iso": "2026-08-29T15:26:11+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "latency_batch": 32,
+    "seed": 42,
+    "cmdline": "./bin/ktxengine --iters 400000 --warmup 40000 --out experiments/results/v2/e13_engine.json"
+  },
+  "runs": [
+    { "kernel": "k_bytesum", "metrics": { "interp_ns": 2502.604, "jit_ns": 98.958, "native_c_ns": 13.021, "ubpf_interp_ns": 5718.750, "ubpf_jit_ns": 80.729,
+        "jit_speedup_over_interp": 25.289, "jit_vs_native_c": 7.600, "interp_vs_ubpf_interp": 0.438, "jit_vs_ubpf_jit": 1.226 } },
+    { "kernel": "k_hash", "metrics": { "interp_ns": 1486.979, "jit_ns": 188.802, "native_c_ns": 152.344, "ubpf_interp_ns": 2968.750, "ubpf_jit_ns": 182.292,
+        "jit_speedup_over_interp": 7.876, "jit_vs_native_c": 1.239, "interp_vs_ubpf_interp": 0.501, "jit_vs_ubpf_jit": 1.036 } },
+    { "kernel": "k_stride", "metrics": { "interp_ns": 343.750, "jit_ns": 19.531, "native_c_ns": 1.302, "ubpf_interp_ns": 748.698, "ubpf_jit_ns": 10.417,
+        "jit_speedup_over_interp": 17.600, "jit_vs_native_c": 15.000, "interp_vs_ubpf_interp": 0.459, "jit_vs_ubpf_jit": 1.875 } }
+  ],
+  "sink": 16051218261252025792
+}

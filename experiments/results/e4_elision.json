@@ -1,0 +1,138 @@
+{
+  "experiment": "e4_elision",
+  "meta": {
+    "date_iso": "2026-08-29T07:06:56+0700",
+    "note": "static analysis output of src/elide/elide.py on this machine; merged verbatim from workloads/*.elide.json by run_all.sh; no runtime timing involved",
+    "seed": 42,
+    "cmdline": "run_all.sh e4_merge"
+  },
+  "runs": [
+    {
+      "prog": "atomic_demo",
+      "n_insns": 37,
+      "n_mem_insns": 10,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [],
+      "analysis_ms": 0.275,
+      "fuel_bound": 37,
+      "analysis_complete": true
+    },
+    {
+      "prog": "atomic_reader",
+      "n_insns": 24,
+      "n_mem_insns": 5,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [
+        "acct_a",
+        "acct_b"
+      ],
+      "analysis_ms": 0.232,
+      "fuel_bound": 24,
+      "analysis_complete": true
+    },
+    {
+      "prog": "ctnat",
+      "n_insns": 40,
+      "n_mem_insns": 12,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [],
+      "analysis_ms": 0.28,
+      "fuel_bound": 40,
+      "analysis_complete": true
+    },
+    {
+      "prog": "ctnat_reader",
+      "n_insns": 24,
+      "n_mem_insns": 5,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [
+        "conntrack",
+        "nat"
+      ],
+      "analysis_ms": 0.286,
+      "fuel_bound": 24,
+      "analysis_complete": true
+    },
+    {
+      "prog": "flowstats",
+      "n_insns": 30,
+      "n_mem_insns": 10,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [],
+      "analysis_ms": 0.238,
+      "fuel_bound": 30,
+      "analysis_complete": true
+    },
+    {
+      "prog": "loopy",
+      "n_insns": 67,
+      "n_mem_insns": 20,
+      "elided_tx_pct": 85.0,
+      "elided_direct_pct": 85.0,
+      "fuel_elided": false,
+      "ro_maps": [],
+      "analysis_ms": 0.892,
+      "analysis_complete": true
+    },
+    {
+      "prog": "maglev",
+      "n_insns": 17,
+      "n_mem_insns": 4,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [
+        "table"
+      ],
+      "analysis_ms": 0.186,
+      "fuel_bound": 17,
+      "analysis_complete": true
+    },
+    {
+      "prog": "pktcount",
+      "n_insns": 16,
+      "n_mem_insns": 6,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [],
+      "analysis_ms": 0.278,
+      "fuel_bound": 16,
+      "analysis_complete": true
+    },
+    {
+      "prog": "pktrewrite",
+      "n_insns": 22,
+      "n_mem_insns": 4,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [],
+      "analysis_ms": 0.272,
+      "fuel_bound": 162,
+      "analysis_complete": true
+    },
+    {
+      "prog": "tokenbucket",
+      "n_insns": 42,
+      "n_mem_insns": 10,
+      "elided_tx_pct": 100.0,
+      "elided_direct_pct": 100.0,
+      "fuel_elided": true,
+      "ro_maps": [],
+      "analysis_ms": 0.292,
+      "fuel_bound": 42,
+      "analysis_complete": true
+    }
+  ]
+}

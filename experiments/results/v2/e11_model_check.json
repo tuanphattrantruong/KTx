@@ -1,0 +1,285 @@
+{
+ "configs": [
+  {
+   "config": "2 tx, disjoint stripes",
+   "ktx": {
+    "states": 64,
+    "terminals": 9,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "ktx_no_spin_abort": {
+    "states": 36,
+    "terminals": 1,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl": {
+    "states": 16,
+    "terminals": 1,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl_no_cancel": {
+    "states": 16,
+    "terminals": 1,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   }
+  },
+  {
+   "config": "2 tx, same stripe (lost-update shape)",
+   "ktx": {
+    "states": 66,
+    "terminals": 16,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "ktx_no_spin_abort": {
+    "states": 34,
+    "terminals": 4,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl": {
+    "states": 19,
+    "terminals": 4,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl_no_cancel": {
+    "states": 13,
+    "terminals": 2,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   }
+  },
+  {
+   "config": "2 tx, crossed read/write (the cross-map shape)",
+   "ktx": {
+    "states": 134,
+    "terminals": 31,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "ktx_no_spin_abort": {
+    "states": 67,
+    "terminals": 6,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl": {
+    "states": 40,
+    "terminals": 6,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl_no_cancel": {
+    "states": 22,
+    "terminals": 3,
+    "deadlock_states": 1,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   }
+  },
+  {
+   "config": "2 tx, reader vs writer over a map pair",
+   "ktx": {
+    "states": 92,
+    "terminals": 14,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "ktx_no_spin_abort": {
+    "states": 60,
+    "terminals": 4,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl": {
+    "states": 25,
+    "terminals": 4,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl_no_cancel": {
+    "states": 17,
+    "terminals": 2,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   }
+  },
+  {
+   "config": "3 tx over 2 stripes",
+   "ktx": {
+    "states": 949,
+    "terminals": 133,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "ktx_no_spin_abort": {
+    "states": 370,
+    "terminals": 20,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl": {
+    "states": 152,
+    "terminals": 22,
+    "deadlock_states": 0,
+    "atomicity_violations": 5,
+    "serializability_violations": 5,
+    "effects_after_abort": 5
+   },
+   "twopl_no_cancel": {
+    "states": 68,
+    "terminals": 6,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   }
+  },
+  {
+   "config": "3 tx over 3 stripes, overlapping",
+   "ktx": {
+    "states": 1077,
+    "terminals": 92,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "ktx_no_spin_abort": {
+    "states": 544,
+    "terminals": 15,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl": {
+    "states": 194,
+    "terminals": 27,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl_no_cancel": {
+    "states": 80,
+    "terminals": 7,
+    "deadlock_states": 1,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   }
+  },
+  {
+   "config": "3 tx, cross-map pair + observer (the E3 shape)",
+   "ktx": {
+    "states": 1506,
+    "terminals": 180,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "ktx_no_spin_abort": {
+    "states": 738,
+    "terminals": 36,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl": {
+    "states": 220,
+    "terminals": 31,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl_no_cancel": {
+    "states": 70,
+    "terminals": 10,
+    "deadlock_states": 4,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   }
+  },
+  {
+   "config": "4 tx over 2 stripes",
+   "ktx": {
+    "states": 22279,
+    "terminals": 2818,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "ktx_no_spin_abort": {
+    "states": 6605,
+    "terminals": 270,
+    "deadlock_states": 0,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   },
+   "twopl": {
+    "states": 1672,
+    "terminals": 224,
+    "deadlock_states": 0,
+    "atomicity_violations": 108,
+    "serializability_violations": 108,
+    "effects_after_abort": 108
+   },
+   "twopl_no_cancel": {
+    "states": 302,
+    "terminals": 44,
+    "deadlock_states": 20,
+    "atomicity_violations": 0,
+    "serializability_violations": 0,
+    "effects_after_abort": 0
+   }
+  }
+ ],
+ "verdict": "PASS"
+}

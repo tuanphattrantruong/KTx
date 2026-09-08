@@ -1,0 +1,47 @@
+
+=== build ===
+Sat Aug 29 07:05:00 +07 2026
+
+=== assemble+elide ===
+Sat Aug 29 07:05:00 +07 2026
+
+=== e1_lat ===
+Sat Aug 29 07:05:01 +07 2026
+
+=== e1_thr ===
+Sat Aug 29 07:05:20 +07 2026
+
+=== e2_micro ===
+Sat Aug 29 07:06:25 +07 2026
+
+=== e3a ===
+Sat Aug 29 07:06:43 +07 2026
+
+=== e3b ===
+Sat Aug 29 07:06:45 +07 2026
+e3b calibration ctnat try 1: window [16,96] abort_fraction=0.25786 -> ok
+e3b calibration ctnat: chosen fuel window [16,96]
+e3b calibration atomic try 1: window [16,96] abort_fraction=0.17344 -> low
+e3b calibration atomic try 2: window [8,56] abort_fraction=0.45058 -> ok
+e3b calibration atomic: chosen fuel window [8,56]
+
+=== e5 ===
+Sat Aug 29 07:06:46 +07 2026
+
+=== e4_merge ===
+Sat Aug 29 07:06:56 +07 2026
+
+=== analyze ===
+Sat Aug 29 07:06:56 +07 2026
+
+=== done ===
+Sat Aug 29 07:06:56 +07 2026
+
+=== analyze (rerun after analyze.py log_k fix) ===
+Sat Aug 29 07:07:52 +07 2026
+
+=== audit: e3b rerun after torn.c E3b conflict-accounting fix ===
+Sat Aug 29 07:15:54 +07 2026
+
+=== audit: analyze rerun (E2 commit-only derivation + corrected e3b files) ===
+Sat Aug 29 07:18:59 +07 2026

@@ -1,0 +1,71 @@
+{
+  "comment": "Machine-readable experiment matrix (DESIGN.md section 9). run_all.sh executes exactly this; every run writes one JSON into experiments/results/.",
+  "seed": 42,
+  "defaults": {
+    "fuel": 65536,
+    "nkeys": 1024,
+    "zipf_theta": 0.0,
+    "pktlen_min": 64,
+    "pktlen_max": 256,
+    "warmup_latency": 100000,
+    "latency_batch": 32
+  },
+  "workloads_all": ["pktcount", "flowstats", "tokenbucket", "maglev",
+                    "ctnat", "ctnat_reader", "pktrewrite", "loopy",
+                    "atomic_demo", "atomic_reader"],
+  "W8": ["pktcount", "flowstats", "tokenbucket", "maglev", "ctnat",
+         "pktrewrite", "loopy", "atomic_demo"],
+  "modes": ["vanilla", "sfi", "tx", "tx-elide"],
+  "e1_latency": {
+    "workloads": "W8", "modes": "modes",
+    "threads": 1, "iters": 1000000, "warmup": 100000, "batch": 32,
+    "elide_sidecar_modes": ["tx-elide"],
+    "out": "e1_lat_<prog>_<mode>.json"
+  },
+  "e1_throughput": {
+    "workloads": "W8", "modes": "modes",
+    "threads": 8, "iters_per_thread": 2000000, "warmup_per_thread": 10000,
+    "elide_sidecar_modes": ["tx-elide"],
+    "out": "e1_thr_<prog>_<mode>.json"
+  },
+  "e2": {
+    "binary": "bin/ktxmicro",
+    "log_sizes": [1, 2, 4, 8, 16, 32, 64, 128, 256],
+    "reps_per_point": 200000, "threads": 1,
+    "out": "e2_micro.json"
+  },
+  "e3a": {
+    "pairs": ["ctnat", "atomic"], "modes": ["vanilla", "tx"],
+    "writers": 4, "readers": 2, "ops_per_writer": 1000000, "nkeys": 512,
+    "out": "e3a_<pair>_<mode>.json"
+  },
+  "e3b": {
+    "pairs": ["ctnat", "atomic"], "modes": ["sfi", "tx"],
+    "writers": 4, "readers": 0, "ops_per_writer": 500000, "nkeys": 512,
+    "calibration": {
+      "mode": "sfi", "ops_per_writer": 12500, "max_runs": 5,
+      "initial_window": [16, 96],
+      "target_abort_fraction": [0.2, 0.8],
+      "out": "e3b_cal_<pair>_try<i>.json"
+    },
+    "out": "e3b_<pair>_<mode>.json"
+  },
+  "e4": {
+    "analyzer": "src/elide/elide.py",
+    "workloads": "workloads_all",
+    "out": "e4_elision.json"
+  },
+  "e5": {
+    "prog": "flowstats",
+    "threads": [1, 2, 4, 8],
+    "zipf": [0.0, 0.9, 1.2],
+    "modes": ["tx-elide", "vanilla"],
+    "iters_per_thread": 1000000, "warmup_per_thread": 10000, "nkeys": 1024,
+    "out": "e5_<threads>t_z<zipf>_<mode>.json"
+  },
+  "expectations": {
+    "e3a": "vanilla violations > 0; tx violations == 0",
+    "e3b": "sfi torn_keys > 0; tx torn_keys == 0",
+    "e4": "loopy fuel_elided == false; maglev ro_maps contains 'table'"
+  }
+}

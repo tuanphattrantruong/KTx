@@ -1,0 +1,31 @@
+{
+  "experiment": "e15_coarse",
+  "meta": {
+    "date_iso": "2026-08-31T17:22:23+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "seed": 102,
+    "cmdline": "bin/ktxbench --prog workloads/ctnat.kbin --mode coarse --jit --measure throughput --threads 16 --iters 200000 --warmup 20000 --seed 102 --nkeys 1024 --zipf 0.0 --pktlen-min 64 --pktlen-max 256 --fuel 65536 --exp e15_coarse --out experiments/results/v3/e15_ctnat_coarse_16t_r2.json"
+  },
+  "runs": [
+    {
+      "prog": "ctnat.kbin", "mode": "coarse", "measure": "throughput",
+      "threads": 16, "iters": 200000, "warmup": 20000, "fuel": 65536,
+      "nkeys": 1024, "zipf_theta": 0.000, "pktlen_min": 64, "pktlen_max": 256,
+      "shadow_diff": 1, "jit": 1, "jit_active": 1, "jit_code_bytes": 5496,
+      "memory": { "thread_bytes": 86688, "prog_bytes": 4064, "map_data_bytes": 327680, "map_meta_bytes": 34016, "ring_bytes": 1048576, "threads": 16, "rss_bytes": 3260416, "hwm_arena_bytes": 88, "hwm_records": 3, "hwm_readset": 2 },
+      "elide": null,
+      "metrics": {
+        "ops_total": 3200000, "wall_s": 4.109469, "mops_per_s": 0.7787,
+        "goodput_commits_per_s": 778689.4,
+        "per_thread_ops": [200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000],
+        "commits": 3200000, "aborts_guard": 0, "aborts_fuel": 0, "aborts_helper": 0, "aborts_conflict": 0, "aborts_capacity": 0, "aborts_deadlock": 0, "retries": 0, "elide_faults": 0, "elide_audited": 0
+      }
+    }
+  ]
+}

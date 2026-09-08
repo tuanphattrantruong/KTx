@@ -1,0 +1,32 @@
+{
+  "experiment": "e1_latency",
+  "meta": {
+    "date_iso": "2026-08-29T14:32:20+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "latency_batch": 32,
+    "seed": 44,
+    "cmdline": "bin/ktxbench --prog workloads/flowstats_c.kbin --jit --mode sfi --measure latency --threads 1 --iters 500000 --warmup 50000 --seed 44 --nkeys 1024 --zipf 0.0 --pktlen-min 64 --pktlen-max 256 --fuel 65536 --batch 32 --exp e1_latency --out experiments/results/v2/e1_lat_flowstats_c_jsfi_r2.json"
+  },
+  "runs": [
+    {
+      "prog": "flowstats_c.kbin", "mode": "sfi", "measure": "latency",
+      "threads": 1, "iters": 500000, "warmup": 50000, "fuel": 65536,
+      "nkeys": 1024, "zipf_theta": 0.000, "pktlen_min": 64, "pktlen_max": 256,
+      "shadow_diff": 1, "jit": 1, "jit_active": 1, "jit_code_bytes": 4524,
+      "memory": { "thread_bytes": 86688, "prog_bytes": 3200, "map_data_bytes": 163840, "map_meta_bytes": 17008, "ring_bytes": 1048576, "threads": 1, "rss_bytes": 2441216, "hwm_arena_bytes": 0, "hwm_records": 0, "hwm_readset": 0 },
+      "elide": null,
+      "timed_region": "ktx_run_only", "batch": 32,
+      "metrics": {
+        "iters_timed": 500000, "batches": 15625,
+        "ns_min": 33.854, "ns_p50": 39.062, "ns_p90": 41.667, "ns_p99": 52.083, "ns_p999": 201.823, "ns_mean": 39.901,
+        "commits": 500000, "aborts_guard": 0, "aborts_fuel": 0, "aborts_helper": 0, "aborts_conflict": 0, "aborts_capacity": 0, "aborts_deadlock": 0, "retries": 0, "elide_faults": 0, "elide_audited": 0
+      }
+    }
+  ]
+}

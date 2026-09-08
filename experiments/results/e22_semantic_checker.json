@@ -1,0 +1,798 @@
+{
+  "experiment": "E22_semantic_certificate_checker",
+  "programs": 14,
+  "valid_accepted": 14,
+  "valid": [
+    {
+      "accepted": true,
+      "program": "atomic_demo.kbin",
+      "sha256": "4280ca57ed24ce79ef3d30063af2ccaaed1692b02b92a79c4358373eb9f78d02",
+      "n_insns": 37,
+      "n_maps": 2,
+      "claimed_instruction_facts": 20,
+      "claimed_read_only_maps": 0,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "prandom": 1,
+        "lookup": 2
+      },
+      "analysis": {
+        "prog": "atomic_demo",
+        "n_insns": 37,
+        "n_mem_insns": 10,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [],
+        "analysis_ms": 0.242,
+        "fuel_bound": 37,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "atomic_reader.kbin",
+      "sha256": "9604950e3368d0d73e2844656b451fd1d152c686b71f06e2a32076a0f992227a",
+      "n_insns": 24,
+      "n_maps": 2,
+      "claimed_instruction_facts": 10,
+      "claimed_read_only_maps": 2,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 2
+      },
+      "analysis": {
+        "prog": "atomic_reader",
+        "n_insns": 24,
+        "n_mem_insns": 5,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [
+          "acct_a",
+          "acct_b"
+        ],
+        "analysis_ms": 0.175,
+        "fuel_bound": 24,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "ctnat.kbin",
+      "sha256": "4dfbc2d0a1104f72a2fa7b3d7f6f80b84f76e7d8b0933bc4fc35128eb569d964",
+      "n_insns": 40,
+      "n_maps": 2,
+      "claimed_instruction_facts": 24,
+      "claimed_read_only_maps": 0,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 1,
+        "update": 2
+      },
+      "analysis": {
+        "prog": "ctnat",
+        "n_insns": 40,
+        "n_mem_insns": 12,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [],
+        "analysis_ms": 0.244,
+        "fuel_bound": 40,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "ctnat_reader.kbin",
+      "sha256": "6e2f01ec4d7da7eb0bb11059e6a96e042492731d3b2cc2173e201a70dc4d721b",
+      "n_insns": 24,
+      "n_maps": 2,
+      "claimed_instruction_facts": 10,
+      "claimed_read_only_maps": 2,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 2
+      },
+      "analysis": {
+        "prog": "ctnat_reader",
+        "n_insns": 24,
+        "n_mem_insns": 5,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [
+          "conntrack",
+          "nat"
+        ],
+        "analysis_ms": 0.26,
+        "fuel_bound": 24,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "firewall.kbin",
+      "sha256": "ef7910597f90267fc7c3147462b3089981bbff72c6cc92e41e43d8d46749633b",
+      "n_insns": 49,
+      "n_maps": 2,
+      "claimed_instruction_facts": 16,
+      "claimed_read_only_maps": 1,
+      "fuel_elided": false,
+      "helper_effect_surface": {
+        "lookup": 2,
+        "update": 1
+      },
+      "analysis": {
+        "prog": "firewall",
+        "n_insns": 49,
+        "n_mem_insns": 9,
+        "elided_tx_pct": 88.89,
+        "elided_direct_pct": 88.89,
+        "fuel_elided": false,
+        "ro_maps": [
+          "blocklist"
+        ],
+        "analysis_ms": 0.722,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "flowstats.kbin",
+      "sha256": "94306becd875b1917abcba6121f63b66a0047973db25e613b087a0dfb2e9e781",
+      "n_insns": 30,
+      "n_maps": 1,
+      "claimed_instruction_facts": 20,
+      "claimed_read_only_maps": 0,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 1,
+        "update": 1
+      },
+      "analysis": {
+        "prog": "flowstats",
+        "n_insns": 30,
+        "n_mem_insns": 10,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [],
+        "analysis_ms": 0.181,
+        "fuel_bound": 30,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "flowstats_c.kbin",
+      "sha256": "438a805dcaa2d595a99de1331af2b2939ebb0bb0cdfb46a8543d2ceb0610925a",
+      "n_insns": 31,
+      "n_maps": 1,
+      "claimed_instruction_facts": 20,
+      "claimed_read_only_maps": 0,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 1,
+        "update": 1
+      },
+      "analysis": {
+        "prog": "flowstats_c",
+        "n_insns": 31,
+        "n_mem_insns": 10,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [],
+        "analysis_ms": 0.202,
+        "fuel_bound": 31,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "l4lb.kbin",
+      "sha256": "7ea673212c79881dd16386e2a9aeea3f24129c148042ec9eccac568bff1ee8be",
+      "n_insns": 145,
+      "n_maps": 5,
+      "claimed_instruction_facts": 84,
+      "claimed_read_only_maps": 2,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 4,
+        "ktime": 2,
+        "update": 2,
+        "ringbuf": 1,
+        "packet_store": 1
+      },
+      "analysis": {
+        "prog": "l4lb",
+        "n_insns": 145,
+        "n_mem_insns": 42,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [
+          "lb_table",
+          "lb_events"
+        ],
+        "analysis_ms": 0.939,
+        "fuel_bound": 145,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "loopy.kbin",
+      "sha256": "21d8d1d0719d4e2e27099068a4c2601deabf5488c97484bb7a5ab8bbbcfb21cf",
+      "n_insns": 67,
+      "n_maps": 1,
+      "claimed_instruction_facts": 34,
+      "claimed_read_only_maps": 0,
+      "fuel_elided": false,
+      "helper_effect_surface": {
+        "lookup": 1,
+        "update": 1
+      },
+      "analysis": {
+        "prog": "loopy",
+        "n_insns": 67,
+        "n_mem_insns": 20,
+        "elided_tx_pct": 85.0,
+        "elided_direct_pct": 85.0,
+        "fuel_elided": false,
+        "ro_maps": [],
+        "analysis_ms": 1.107,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "maglev.kbin",
+      "sha256": "a8b1750d08d5c06e03b700e9785db26b4ee1e4239be4323142a8675ca979f7cc",
+      "n_insns": 17,
+      "n_maps": 1,
+      "claimed_instruction_facts": 8,
+      "claimed_read_only_maps": 1,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 1
+      },
+      "analysis": {
+        "prog": "maglev",
+        "n_insns": 17,
+        "n_mem_insns": 4,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [
+          "table"
+        ],
+        "analysis_ms": 0.132,
+        "fuel_bound": 17,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "pktcount.kbin",
+      "sha256": "e9bd0f22ec4516dbda6ce4fda490d1807b44120d256f4a270f92f498305e3d19",
+      "n_insns": 16,
+      "n_maps": 1,
+      "claimed_instruction_facts": 12,
+      "claimed_read_only_maps": 0,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 1
+      },
+      "analysis": {
+        "prog": "pktcount",
+        "n_insns": 16,
+        "n_mem_insns": 6,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [],
+        "analysis_ms": 0.127,
+        "fuel_bound": 16,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "pktrewrite.kbin",
+      "sha256": "be2402e787bc02adfe97f7e7040f2217eee1369fbfe98d238a7095c763abfdfa",
+      "n_insns": 22,
+      "n_maps": 0,
+      "claimed_instruction_facts": 8,
+      "claimed_read_only_maps": 0,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "packet_store": 1
+      },
+      "analysis": {
+        "prog": "pktrewrite",
+        "n_insns": 22,
+        "n_mem_insns": 4,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [],
+        "analysis_ms": 0.228,
+        "fuel_bound": 162,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "policy.kbin",
+      "sha256": "ec3fb2e55b94655250a5cc5422ae411a27bce492bc59e06f9db97baf68804c31",
+      "n_insns": 65,
+      "n_maps": 3,
+      "claimed_instruction_facts": 44,
+      "claimed_read_only_maps": 1,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 3,
+        "ktime": 2,
+        "update": 1
+      },
+      "analysis": {
+        "prog": "policy",
+        "n_insns": 65,
+        "n_mem_insns": 22,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [
+          "pol_rules"
+        ],
+        "analysis_ms": 0.484,
+        "fuel_bound": 65,
+        "analysis_complete": true
+      }
+    },
+    {
+      "accepted": true,
+      "program": "tokenbucket.kbin",
+      "sha256": "67d1d6d0fe137e8dd69a80f329aa449367d7ebdacf0c3f70e038b1c085231e8d",
+      "n_insns": 42,
+      "n_maps": 1,
+      "claimed_instruction_facts": 20,
+      "claimed_read_only_maps": 0,
+      "fuel_elided": true,
+      "helper_effect_surface": {
+        "lookup": 1,
+        "ktime": 2,
+        "update": 1
+      },
+      "analysis": {
+        "prog": "tokenbucket",
+        "n_insns": 42,
+        "n_mem_insns": 10,
+        "elided_tx_pct": 100.0,
+        "elided_direct_pct": 100.0,
+        "fuel_elided": true,
+        "ro_maps": [],
+        "analysis_ms": 0.243,
+        "fuel_bound": 42,
+        "analysis_complete": true
+      }
+    }
+  ],
+  "mutations": 68,
+  "mutations_rejected": 68,
+  "attacks": [
+    {
+      "program": "atomic_demo.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "atomic_demo.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "atomic_demo.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 90 != expected 91"
+    },
+    {
+      "program": "atomic_demo.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 2"
+    },
+    {
+      "program": "atomic_demo.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    },
+    {
+      "program": "atomic_reader.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "atomic_reader.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "atomic_reader.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 77 != expected 78"
+    },
+    {
+      "program": "atomic_reader.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 2"
+    },
+    {
+      "program": "ctnat.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "ctnat.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "ctnat.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 93 != expected 94"
+    },
+    {
+      "program": "ctnat.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 4"
+    },
+    {
+      "program": "ctnat.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    },
+    {
+      "program": "ctnat_reader.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "ctnat_reader.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "ctnat_reader.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 77 != expected 78"
+    },
+    {
+      "program": "ctnat_reader.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 3"
+    },
+    {
+      "program": "firewall.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "firewall.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "firewall.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 102 != expected 103"
+    },
+    {
+      "program": "firewall.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 2"
+    },
+    {
+      "program": "firewall.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 1"
+    },
+    {
+      "program": "firewall.kbin",
+      "attack": "unentailed_fuel",
+      "rejected": true,
+      "reason": "unentailed fuel-elision fact"
+    },
+    {
+      "program": "flowstats.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "flowstats.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "flowstats.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 82 != expected 83"
+    },
+    {
+      "program": "flowstats.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 4"
+    },
+    {
+      "program": "flowstats.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    },
+    {
+      "program": "flowstats_c.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "flowstats_c.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "flowstats_c.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 83 != expected 84"
+    },
+    {
+      "program": "flowstats_c.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 1"
+    },
+    {
+      "program": "flowstats_c.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    },
+    {
+      "program": "l4lb.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "l4lb.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "l4lb.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 201 != expected 202"
+    },
+    {
+      "program": "l4lb.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 1"
+    },
+    {
+      "program": "l4lb.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    },
+    {
+      "program": "loopy.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "loopy.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "loopy.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 119 != expected 120"
+    },
+    {
+      "program": "loopy.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 5"
+    },
+    {
+      "program": "loopy.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    },
+    {
+      "program": "loopy.kbin",
+      "attack": "unentailed_fuel",
+      "rejected": true,
+      "reason": "unentailed fuel-elision fact"
+    },
+    {
+      "program": "maglev.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "maglev.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "maglev.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 69 != expected 70"
+    },
+    {
+      "program": "maglev.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 2"
+    },
+    {
+      "program": "pktcount.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "pktcount.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "pktcount.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 68 != expected 69"
+    },
+    {
+      "program": "pktcount.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 2"
+    },
+    {
+      "program": "pktcount.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    },
+    {
+      "program": "pktrewrite.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "pktrewrite.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "pktrewrite.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 73 != expected 74"
+    },
+    {
+      "program": "pktrewrite.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 0"
+    },
+    {
+      "program": "policy.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "policy.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "policy.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 119 != expected 120"
+    },
+    {
+      "program": "policy.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 0"
+    },
+    {
+      "program": "policy.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    },
+    {
+      "program": "tokenbucket.kbin",
+      "attack": "program_digest",
+      "rejected": true,
+      "reason": "program digest mismatch"
+    },
+    {
+      "program": "tokenbucket.kbin",
+      "attack": "version",
+      "rejected": true,
+      "reason": "unsupported version 99"
+    },
+    {
+      "program": "tokenbucket.kbin",
+      "attack": "truncation",
+      "rejected": true,
+      "reason": "size 94 != expected 95"
+    },
+    {
+      "program": "tokenbucket.kbin",
+      "attack": "unentailed_bounds",
+      "rejected": true,
+      "reason": "unentailed instruction fact at slot 3"
+    },
+    {
+      "program": "tokenbucket.kbin",
+      "attack": "unentailed_read_only_map",
+      "rejected": true,
+      "reason": "unentailed read-only map fact at map 0"
+    }
+  ],
+  "checker_sha256": "40652c8bb65e99c47e14130ac4db206a7838b9cc93c923317b38a9310ba3b8e7",
+  "protocol": "generate digest-bound v2 certificates, replay typed transfer semantics, and mutate digest/framing/fuel/bounds/map facts wherever applicable"
+}

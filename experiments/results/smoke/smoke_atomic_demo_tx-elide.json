@@ -1,0 +1,30 @@
+{
+  "experiment": "smoke",
+  "meta": {
+    "date_iso": "2026-08-29T04:29:43+0700",
+    "host": "Apple M1",
+    "ncpu": 8,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "12.0.5 (clang-1205.0.22.9)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "latency_batch": 32,
+    "seed": 42,
+    "cmdline": "bin/ktxbench --prog workloads/atomic_demo.kbin --elide workloads/atomic_demo.elide --mode tx-elide --measure latency --threads 1 --iters 1000 --warmup 100 --seed 42 --nkeys 64 --batch 32 --exp smoke --out experiments/results/smoke/smoke_atomic_demo_tx-elide.json"
+  },
+  "runs": [
+    {
+      "prog": "atomic_demo.kbin", "mode": "tx-elide", "measure": "latency",
+      "threads": 1, "iters": 1000, "warmup": 100, "fuel": 65536,
+      "nkeys": 64, "zipf_theta": 0.000, "pktlen_min": 64, "pktlen_max": 256,
+      "elide": "workloads/atomic_demo.elide",
+      "timed_region": "ktx_run_only", "batch": 32,
+      "metrics": {
+        "iters_timed": 992, "batches": 31,
+        "ns_min": 140.625, "ns_p50": 143.229, "ns_p90": 145.833, "ns_p99": 145.833, "ns_p999": 145.833, "ns_mean": 143.397,
+        "commits": 992, "aborts_guard": 0, "aborts_fuel": 0, "aborts_helper": 0, "aborts_conflict": 0, "aborts_capacity": 0
+      }
+    }
+  ]
+}

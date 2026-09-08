@@ -1,0 +1,26 @@
+2 tx, disjoint stripes
+  KTx :      64 states,      9 terminal, deadlock=0, atomicity_viol=0, serializability_viol=0
+  2PL :      16 states,      1 terminal, deadlock=0, effects_after_abort=0, serializability_viol=0
+2 tx, same stripe (lost-update shape)
+  KTx :      66 states,     16 terminal, deadlock=0, atomicity_viol=0, serializability_viol=0
+  2PL :      19 states,      4 terminal, deadlock=0, effects_after_abort=0, serializability_viol=0
+2 tx, crossed read/write (the cross-map shape)
+  KTx :     134 states,     31 terminal, deadlock=0, atomicity_viol=0, serializability_viol=0
+  2PL :      40 states,      6 terminal, deadlock=1, effects_after_abort=0, serializability_viol=0
+2 tx, reader vs writer over a map pair
+  KTx :      92 states,     14 terminal, deadlock=0, atomicity_viol=0, serializability_viol=0
+  2PL :      25 states,      4 terminal, deadlock=0, effects_after_abort=0, serializability_viol=0
+3 tx over 2 stripes
+  KTx :     949 states,    133 terminal, deadlock=0, atomicity_viol=0, serializability_viol=0
+  2PL :     152 states,     22 terminal, deadlock=0, effects_after_abort=5, serializability_viol=5
+3 tx over 3 stripes, overlapping
+  KTx :    1077 states,     92 terminal, deadlock=0, atomicity_viol=0, serializability_viol=0
+  2PL :     194 states,     27 terminal, deadlock=1, effects_after_abort=0, serializability_viol=0
+3 tx, cross-map pair + observer (the E3 shape)
+  KTx :    1506 states,    180 terminal, deadlock=0, atomicity_viol=0, serializability_viol=0
+  2PL :     220 states,     31 terminal, deadlock=4, effects_after_abort=0, serializability_viol=0
+4 tx over 2 stripes
+  KTx :   22279 states,   2818 terminal, deadlock=0, atomicity_viol=0, serializability_viol=0
+  2PL :    1672 states,    224 terminal, deadlock=20, effects_after_abort=108, serializability_viol=108
+
+verdict: PASS

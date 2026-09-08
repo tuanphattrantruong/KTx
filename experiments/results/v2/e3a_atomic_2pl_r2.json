@@ -1,0 +1,28 @@
+{
+  "experiment": "e3_torn",
+  "meta": {
+    "date_iso": "2026-08-29T14:19:53+0700",
+    "host": "Apple M3 Ultra",
+    "ncpu": 32,
+    "cores_note": "Apple Silicon asymmetric P/E cores, no thread pinning available",
+    "cc": "21.0.0 (clang-2100.1.1.101)",
+    "timer": "mach_absolute_time",
+    "timebase_num": 125, "timebase_denom": 3,
+    "timer_granularity_ns": 41.6667,
+    "seed": 44,
+    "cmdline": "bin/ktxtorn --pair atomic --mode 2pl --writers 4 --readers 2 --ops-per-writer 1000000 --seed 44 --nkeys 512 --workloads-dir workloads --out experiments/results/v2/e3a_atomic_2pl_r2.json"
+  },
+  "runs": [
+    {
+      "sub_experiment": "e3a", "pair": "atomic", "mode": "2pl",
+      "writers": 4, "readers": 2, "ops_per_writer": 1000000, "nkeys": 512, "seed": 44,
+      "fuel_lo": null, "fuel_hi": null, "fuel": 65536,
+      "metrics": {
+        "wall_s": 0.882570,
+        "writer_ops": 4000000, "writer_attempts": 4001741, "writer_retries": 0, "writer_other_aborts": 1741,
+        "reader_commits": 2311742, "violations": 0, "reader_conflicts": 0, "reader_other_aborts": 1221,
+        "final_torn_keys": 0, "final_scanned_keys": 256
+      }
+    }
+  ]
+}

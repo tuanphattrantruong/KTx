@@ -1,0 +1,12 @@
+{
+  "prog": "flowstats_c",
+  "n_insns": 31,
+  "n_mem_insns": 10,
+  "elided_tx_pct": 100.0,
+  "elided_direct_pct": 100.0,
+  "fuel_elided": true,
+  "ro_maps": [],
+  "analysis_ms": 0.4,
+  "fuel_bound": 31,
+  "analysis_complete": true
+}

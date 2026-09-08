@@ -1,0 +1,30 @@
+
+=== build ===
+Sat Aug 29 14:02:48 +07 2026
+
+=== assemble+elide ===
+Sat Aug 29 14:02:48 +07 2026
+
+=== e1 (3 reps x 12 configs) ===
+Sat Aug 29 14:02:49 +07 2026
+
+=== e2_micro ===
+Sat Aug 29 14:19:06 +07 2026
+
+=== e3a ===
+Sat Aug 29 14:19:34 +07 2026
+
+=== e3b ===
+Sat Aug 29 14:19:54 +07 2026
+
+=== e5 (3 reps) ===
+Sat Aug 29 14:19:58 +07 2026
+
+=== e8_serializability ===
+Sat Aug 29 14:21:46 +07 2026
+
+=== e9_policy ===
+Sat Aug 29 14:21:51 +07 2026
+
+=== done-timed ===
+Sat Aug 29 14:22:21 +07 2026

@@ -1,0 +1,13 @@
+{
+  "prog": "firewall",
+  "n_insns": 49,
+  "n_mem_insns": 9,
+  "elided_tx_pct": 88.89,
+  "elided_direct_pct": 88.89,
+  "fuel_elided": false,
+  "ro_maps": [
+    "blocklist"
+  ],
+  "analysis_ms": 0.757,
+  "analysis_complete": true
+}
